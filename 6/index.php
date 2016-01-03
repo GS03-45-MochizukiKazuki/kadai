@@ -23,6 +23,8 @@
 	.form__sex, .form__syumi, .form__free{
 		margin: 10px 0;
 		width: 400px;
+		padding-top: 15px;
+		position: relative;
 	}
 	.form__free span{
 		vertical-align: top;
@@ -44,13 +46,19 @@
 		color: #fff;
 	}
 
+	.errorMsg{
+		position: absolute;
+		color: #f00;
+		top: 0;
+		font-size: .6rem;
+	}
 
 
 </style>
 </head>
 <body>
 <H1>すごいアンケート</H1>
-<form action="check_name.php" method="post">
+<form action="check_name.php" method="post" id="myForm">
 	<div class="form__name">
 		<span>名前 : </span><input type="text" name="name" />
 	</div>
@@ -82,7 +90,7 @@
 
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/validation.js"></script>
 <script>
 // $('input[type="submit"]').on('click', function(){
 	

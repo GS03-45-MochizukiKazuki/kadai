@@ -10,7 +10,6 @@
 
 header("Content-Type: text/html; charset=UTF-8");
 
-//htmlのnameから情報を受け取っている
 $name = $_POST["name"];
 $email = $_POST["email"];
 $phone = $_POST["phone"];
@@ -60,7 +59,7 @@ if($message == ""){
 }
 
 
-//空っぽの時にOKボタンを表示しない
+//空っぽの時に送信ボタンを表示しない
 if($name == "" || $email == "" || $age == "" || $message == "" || $phone == ""){
 	print'<form method="post" action="insert.php">';
 	print'<input type="button" onclick="history.back()" value="戻る">';

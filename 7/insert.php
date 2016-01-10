@@ -1,12 +1,14 @@
- <!DOCTYPE html>
- <html lang="ja">
- <head>
- 	<meta charset="UTF-8">
- 	<title>insert</title>
- </head>
- <body>
- 	
- <?php
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>insert</title>
+</head>
+<body>
+
+<button type="button" onclick="location.href = 'select.php' ">回答を確認</button>
+	
+<?php
 
 header("Content-Type: text/html; charset=UTF-8");
 
@@ -32,6 +34,9 @@ print"<br/>";
 print$email;
 print"にメールをお送りしておりますのでご確認ください。";
 
+// print '<button type="button" onclick="location.href = select.php ">回答を確認</button>';
+
+
 //確認メールの送信
 $mail_sub = 'メッセージを受け付けました';//メールタイトル
 
@@ -49,7 +54,7 @@ $name."様
 望月 一樹
 Mochizuki Kazuki
 k.mochizuki.0409@gmail.com
-TEL:090-4621-7764
+TEL:xxx-xxxx-xxxx
 =========================";
 
 $mail_body2 = 
@@ -93,11 +98,15 @@ if($status==false){
   exit;
 }
 
-$dbh = null;//切断
+// $dbh = null;//切断
+
 
 
 
 ?>
+
+
+
 
  </body>
  </html>

@@ -24,6 +24,7 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $phone = $_POST["phone"];
 $age = $_POST["age"];
+$hobby = $_POST["hobby"];
 $message = $_POST["message"];
 
 print$name ;
@@ -77,14 +78,15 @@ mb_send_mail($my_email, $mail_sub, $mail_body2, $mail_head);
 
 
 //SQL文
-$sql = "INSERT INTO an_table (id, name, email, phone, age, message, indate )VALUES(NULL, :a1, :a2, :a3, :a4, :a5, sysdate())";
+$sql = "INSERT INTO an_table (id, name, email, phone, age, hobby, message, indate )VALUES(NULL, :a1, :a2, :a3, :a4, :a5, :a6, sysdate())";
 $stmt = $dbh->prepare($sql);//命令を出す準備
 //sqlインジェクション回避
 $stmt->bindValue(':a1', $name); 
 $stmt->bindValue(':a2', $email);
 $stmt->bindValue(':a3', $phone);
 $stmt->bindValue(':a4', $age);
-$stmt->bindValue(':a5', $message);
+$stmt->bindValue(':a5', $hobby);
+$stmt->bindValue(':a6', $message);
 $status = $stmt->execute();//命令
 
 //データ登録処理後

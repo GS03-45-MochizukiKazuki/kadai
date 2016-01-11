@@ -14,8 +14,8 @@ $name = $_POST["name"];
 $email = $_POST["email"];
 $phone = $_POST["phone"];
 $age = $_POST["age"];
+$hobby = $_POST["hobby"];
 $message = $_POST["message"];
-
 
 if($name == ""){
 	print"※お名前を入力してください<br/><br/>";
@@ -50,6 +50,21 @@ if($age == ""){
 	print"<br/><br/>";
 }
 
+$hobby_list = "";
+if (is_array($hobby)) {
+	foreach ($hobby as $value) {
+		$hobby_list .= $value."、";
+	}
+	$hobby_list = rtrim($hobby_list, "、");
+}
+if($hobby == ""){
+	print"※趣味を入力してください<br/><br/>";
+}else{
+	print"趣味：";
+	print $hobby_list;
+	print"<br/><br/>";
+}
+
 if($message == ""){
 	print"※メッセージを入力してください<br/><br/>";
 }else{
@@ -60,7 +75,7 @@ if($message == ""){
 
 
 //空っぽの時に送信ボタンを表示しない
-if($name == "" || $email == "" || $age == "" || $message == "" || $phone == ""){
+if($name == "" || $email == "" || $phone == "" || $age == "" || $hobby == "" || $message == "" ){
 	print'<form method="post" action="insert.php">';
 	print'<input type="button" onclick="history.back()" value="戻る">';
 	print'</form>';
@@ -72,6 +87,7 @@ if($name == "" || $email == "" || $age == "" || $message == "" || $phone == ""){
 	print'<input name="email" type="hidden" value="'.$email.'">';
 	print'<input name="phone" type="hidden" value="'.$phone.'">';
 	print'<input name="age" type="hidden" value="'.$age.'">';
+	print'<input name="hobby" type="hidden" value="'.$hobby_list.'">';
 	print'<input name="message" type="hidden" value="'.$message.'">';
 
 	print'<input type="button" onclick="history.back()" value="戻る">';

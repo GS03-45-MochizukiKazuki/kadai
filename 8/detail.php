@@ -30,6 +30,8 @@ while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
   $naiyou = htmlspecialchars($result["naiyou"], ENT_QUOTES, 'UTF-8');
 }
 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">

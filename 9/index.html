@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="決断を減らす人生を実現するライフハックアプリ「MENTAL ENERGY」">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!-- <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" /> -->
+	<title>Mental Energy</title>
+	<link rel="stylesheet" href="css/jquery.fitbar.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/drawer.min.css">
+	<link rel="stylesheet" href="css/screen.css">
+</head>
+
+<body class="drawer drawer-right">
+
+
+<div id="menu">
+	<header>
+		<div class="wrapper">
+			<div id="title"><a href="index.html">MENTAL ENERGY</a></div>
+			<nav id="nav_pc">
+				<ul id="menu_pc">
+					<li><a href="about.html">about</a></li>
+					<li><a href="usage.html">usage</a></li>
+					<li><a href="about.html">download</a></li>
+					<li><a href="about.html" style="color:#fff;">login</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	
+	<div id="nav_mobile">
+		<div class="drawer-toggle drawer-hamburger">
+		        <span class="sr-only"></span> 
+				<span class="drawer-hamburger-icon"></span>
+		</div>
+		<div class="drawer-main drawer-default">
+			<nav class="drawer-nav" role="navigation">
+				<ul id="menu_mobile" class="nav drawer-nav-list">
+					<li><a href="">MENU</a></li>
+					<li><a href="about.html">about<br><span>本サービスについて</span></a></li>
+					<li><a href="usage.html">usage<br><span>使用方法</span></a></li>
+					<li><a href="about.html">download<br><span>ダウンロード</span></a></li>
+					<li><a href="about.html">login<br><span>ログイン</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div><!-- menu -->
+
+<div id="top">
+	<div id="top-wrapper">
+		<div id="top-container">
+			<div id="top-text">
+				<p>MENTAL ENERGY</p>
+				<p>LEADING A GOOD LIFE</p>
+				<p>決断を減らす、迷わない人生へ。</p>
+			</div>
+			<a class="top-button" href="#">LOGIN</a>
+			<div class="icons">
+				<div id="ios"><a href="#"><img src="images/appstore.png"></a></div>
+				<div id="android"><a href="#"><img src="images/googleplay.png"></a></div>
+			</div>
+		</div>
+
+		<div id="bgm">
+			<div id="bgm_on">
+				<i class="fa fa-volume-up fa-stack-2x fa-inverse"></i>
+			</div>
+			<div id="bgm_off">
+				<i class="fa fa-volume-off fa-stack-2x fa-inverse"></i>
+			</div>
+		</div>
+		<audio id="bgm_audio" autoplay>
+	    	<source src="sounds/Prelude No. 23.mp3" type="audio/mp3">
+	  	</audio>
+
+		<div id="facebook">
+			<a href="http://www.facebook.com/sharer.php?u=http://mo49.tokyo/mental-energy/&amp;t=「MENTAL ENERGY」決断を減らす、迷わない人生へ。"
+	onClick="window.open(encodeURI(decodeURI(this.href)),
+	      'sharewindow',
+	      'width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=!'
+	      ); return false;">
+				<img src="images/facebook.png" alt="">
+			</a>
+		</div>
+		<div id="twitter">
+			<a href="http://twitter.com/intent/tweet?text=「MENTAL ENERGY」決断を減らす、迷わない人生へ。&amp;url=http://mo49.tokyo/mental-energy/&amp;via=mo4_9"
+	      onClick="window.open(encodeURI(decodeURI(this.href)),
+	      'tweetwindow',
+	      'width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=1'
+	      ); return false;">
+				<img src="images/twitter.png" alt="">
+			</a>
+		</div>
+		<div>
+			<a href="#sub"><span class="scroll"></span></a>
+		</div>
+	</div><!-- top-wrapper -->
+</div><!-- top -->
+
+
+<div id="dammy" style="height:100vh; width:100vw;"></div>
+
+
+<div id="sub">
+
+	<section class="slowDownAnim">
+		<div id="about">
+			<div class="sectionTitles">
+				<p>より良い人生を送るために</p>
+			</div>
+			<div id="aboutContents">
+				<div class="with-br">
+					<p>本サービス「MENTAL ENERGY」は<br>
+						メンタル・エナジー（人間の集中力や意志力）を保持するために<br>
+						日常の些細な意思決定をルーティン化する上での<br>
+						ルールづくりと管理のお手伝いをさせていただきます。<br>
+						</p>
+				</div>
+				<div class="without-br">
+					<p>本サービス「MENTAL ENERGY」は、メンタル・エナジー（人間の集中力や意志力）を保持するために、日常の些細な意思決定をルーティン化する上での、ルールづくりと管理のお手伝いをさせていただきます。</p>
+				</div>
+			</div>
+			<div>
+				<a class="button" href="about.html">About</a>
+			</div>
+		</div><!-- about -->
+	</section>
+
+	<div class="interval interval1 fadeInAnim">
+		<p> I'm as proud of what we don't do as I am of what we do. </p>
+	</div>
+
+	<section class="slowDownAnim">
+		<div id="usage">
+			<div class="sectionTitles">
+				<p>あなたのルールをつくる</p>
+			</div>
+			<div id="usageContents">
+				<div class="with-br">
+					<p>使い方はいたってシンプル。<br>
+						まず、あなたにとって " 時間を割きたいもの " と " ルーティン化したいもの " を分けます。<br>
+						次に、あなたが " ルーティン化したいもの " に独自のルールを決めて、それを守るだけ。<br>
+						それでは、さっそく始めてみましょう。</p>
+				</div>
+				<p class="without-br">使い方はいたってシンプル。まず、あなたにとって " 時間を割きたいもの " と " ルーティン化したいもの " を分けます。次に、あなたが " ルーティン化したいもの " に独自のルールを決めて、それを守るだけ。それでは、さっそく始めてみましょう。</p>
+			</div>
+			<div>
+				<a class="button" href="usage.html">Usage</a>
+			</div>
+		</div><!-- usage -->
+	</section>
+
+	<div class="interval interval2 fadeInAnim">
+		<p>Life is a series of choices.</p>
+	</div>
+
+	<section class="slowDownAnim">
+		<div id="download">
+			<div class="sectionTitles">
+				<p>１歩を踏み出す</p>
+			</div>
+			<div id="downloadContents">
+				<div class="with-br">
+					<p>「人生は選択の連続である」、そうシェイクスピアは言いました。<br>
+						このサービスを使うか、使わないか。今この瞬間も、選択の時です。<br>
+						「もしあの時、違う選択をしていたら、人生は変わっていたかもしれない」<br>
+						そんな人生の大きな選択ミスをしないために、<br>
+						「MENTAL ENERGY」はきっとあなたの力になるはずです。</p>
+				</div>
+				<p class="without-br">「人生は選択の連続である」、そうシェイクスピアは言いました。このサービスを使うか、使わないか。今この瞬間も、選択の時です。「もしあの時、違う選択をしていたら、人生は変わっていたかもしれない」、そんな人生の大きな選択ミスをしないために、「MENTAL ENERGY」はきっとあなたの力になるはずです。</p>
+			</div>
+			<div class="icons">
+				<div class="ios"><a href="#"><img src="images/appstore.png"></a></div>
+				<div class="android"><a href="#"><img src="images/googleplay.png"></a></div>
+			</div>
+			<div class="iconsMin">
+				<div class="ios"><a href="#"><img src="images/appstore.png"></a></div>
+				<div class="android"><a href="#"><img src="images/googleplay.png"></a></div>
+			</div>
+		</div><!-- download -->
+	</section>
+
+</div><!-- sub -->
+
+
+<footer>
+	<div id="footer-left">
+		<div id="contact"><a href="">お問い合わせ</a></div>
+		<div id="sitemap"><a href="">サイトマップ</a></div>
+		<div id="privacy"><a href="">プライバシーポリシー</a></div>
+		<div>
+			<small>&copy; 2015 Mochizuki Kazuki Allrights Reserved.</small>
+		</div>
+	</div>
+	<div id="footer-right">
+		<div id="topPage"><a href="#"><div class="sankaku"></div>back to top</a></div>
+	</div>
+</footer>
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.fitbar.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+<script src="http://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
+<script src="js/jquery.drawer.min.js"></script>
+<script src="js/backstretch.js"></script>
+<script src="js/main.js"></script>
+<script>
+
+// ドロワーメニュー
+$(document).ready(function() {
+  $(".drawer").drawer();
+});
+
+window.onload = init;
+function init(){
+	$('#top').addClass("fadeIn");
+}
+
+// フルスクリーン
+// $("#main").backstretch("images/yokohama.jpg"); //画像を指定
+$("#top").backstretch([
+    "images/yokohama.jpg",
+    "images/toukyoustation2.jpg",
+    "images/minatomiraipasifico.jpg"
+], {duration: 5000, fade: 1000});
+
+
+
+</script>
+</body>
+</html>
+

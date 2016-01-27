@@ -1,0 +1,25 @@
+/* fitbar */
+.fitbar-blank{
+}
+.fitbar-fixed{
+	margin-top:0!important;
+	margin-bottom:0!important;
+	position:fixed;
+}
+.fitbar-blank,
+.fitbar-fixed,
+.fitbar-none-fixed{
+	clear:both;
+}
+.fitbar-shadow{
+	margin-top:0!important;
+	margin-bottom:0!important;
+	background:#fff;
+	opacity:0.9;
+	position:fixed;
+	width:100%;
+	left:0;
+	border-bottom: 1px solid #333;
+	z-index:10;
+}
+

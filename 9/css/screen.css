@@ -1,0 +1,569 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro|Alegreya+Sans:100,300,400,800);
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 14, ../sass/screen.scss */
+body {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  background-color: #eee;
+  font-family: 'Alegreya Sans', sans-serif !important;
+  font-weight: 300;
+  color: #333;
+  width: 100vw;
+}
+
+/* line 28, ../sass/screen.scss */
+section {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  margin-bottom: 50px;
+}
+@media (max-width: 768px) {
+  /* line 28, ../sass/screen.scss */
+  section {
+    line-height: 2.5rem;
+  }
+}
+/* line 38, ../sass/screen.scss */
+section .with-br {
+  display: block;
+}
+@media (max-width: 768px) {
+  /* line 38, ../sass/screen.scss */
+  section .with-br {
+    display: none;
+  }
+}
+/* line 44, ../sass/screen.scss */
+section .without-br {
+  display: none;
+}
+@media (max-width: 768px) {
+  /* line 44, ../sass/screen.scss */
+  section .without-br {
+    display: block;
+  }
+}
+
+/* line 51, ../sass/screen.scss */
+.sectionTitles {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+/* line 56, ../sass/screen.scss */
+.open {
+  display: block;
+}
+
+/* line 59, ../sass/screen.scss */
+.close {
+  display: none;
+}
+
+/* line 65, ../sass/screen.scss */
+#menu #nav_mobile {
+  z-index: 999999;
+  position: fixed;
+}
+/* line 69, ../sass/screen.scss */
+#menu #nav_mobile #menu_mobile li {
+  text-align: left;
+  display: block;
+  border-bottom: 1px dotted #fff;
+  cursor: pointer;
+  height: 80px;
+  line-height: 25px;
+  font-size: 1.8rem;
+}
+/* line 77, ../sass/screen.scss */
+#menu #nav_mobile #menu_mobile li a {
+  cursor: pointer;
+  margin: 25px 0 0 30px;
+  text-decoration: none;
+  color: #fff;
+}
+/* line 82, ../sass/screen.scss */
+#menu #nav_mobile #menu_mobile li a span {
+  font-size: .8rem;
+}
+/* line 86, ../sass/screen.scss */
+#menu #nav_mobile #menu_mobile li:hover {
+  opacity: .5;
+}
+/* line 89, ../sass/screen.scss */
+#menu #nav_mobile #menu_mobile li:first-child {
+  line-height: 60px;
+  font-size: 2rem;
+  pointer-events: none;
+}
+/* line 99, ../sass/screen.scss */
+#menu header {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  padding: .1px 0;
+  width: 100%;
+  background-color: #eee;
+  opacity: .9;
+  -moz-box-shadow: 2px 1px 10px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 2px 1px 10px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 1px 10px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 108, ../sass/screen.scss */
+#menu header .wrapper {
+  z-index: 999;
+}
+/* line 110, ../sass/screen.scss */
+#menu header .wrapper #title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  float: left;
+  height: 60px;
+  line-height: 65px;
+  margin-left: 40px;
+}
+/* line 117, ../sass/screen.scss */
+#menu header .wrapper #title a {
+  text-decoration: none;
+  color: #000;
+}
+@media (max-width: 768px) {
+  /* line 123, ../sass/screen.scss */
+  #menu header .wrapper #title {
+    margin-left: 30px;
+  }
+}
+/* line 127, ../sass/screen.scss */
+#menu header .wrapper #nav_pc {
+  z-index: 999;
+  float: right;
+}
+/* line 130, ../sass/screen.scss */
+#menu header .wrapper #nav_pc li {
+  font-size: 1.2rem;
+  opacity: .9;
+  display: inline-block;
+  width: 100px;
+  height: 60px;
+  line-height: 65px;
+  /*background-color: #ccc;*/
+  text-align: center;
+  cursor: pointer;
+  border-bottom: 5px solid transparent;
+}
+/* line 142, ../sass/screen.scss */
+#menu header .wrapper #nav_pc li a {
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+/* line 148, ../sass/screen.scss */
+#menu header .wrapper #nav_pc li:hover {
+  cursor: pointer;
+  border-bottom: 5px solid #f8b62d;
+}
+/* line 154, ../sass/screen.scss */
+#menu header .wrapper #nav_pc li:last-child {
+  background-color: #373e52;
+  margin-right: 30px;
+}
+@media (max-width: 768px) {
+  /* line 161, ../sass/screen.scss */
+  #menu header .wrapper #menu_pc {
+    display: none;
+  }
+}
+
+/* line 173, ../sass/screen.scss */
+#top {
+  position: absolute;
+  clear: both;
+  width: 100vw;
+  height: 100vh;
+}
+/* line 182, ../sass/screen.scss */
+#top #top-wrapper {
+  background-image: url(../images/mesh.png);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* line 187, ../sass/screen.scss */
+#top #top-wrapper #top-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+/* line 199, ../sass/screen.scss */
+#top #top-wrapper #top-container #top-text {
+  margin-bottom: 70px;
+}
+/* line 201, ../sass/screen.scss */
+#top #top-wrapper #top-container #top-text p {
+  z-index: 9999;
+  text-align: center;
+  color: #fff;
+  font-size: 2.3rem;
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 6px;
+  line-height: 2.0rem;
+  margin-bottom: 10px;
+}
+/* line 211, ../sass/screen.scss */
+#top #top-wrapper #top-container #top-text p:first-child {
+  font-size: 8rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 15px;
+  line-height: 8rem;
+  margin-bottom: 30px;
+}
+/* line 222, ../sass/screen.scss */
+#top #top-wrapper #top-container #top-text p:last-child {
+  line-height: 2rem;
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 8px;
+}
+@media (max-height: 768px) {
+  /* line 237, ../sass/screen.scss */
+  #top #top-wrapper #top-container #top-text {
+    margin-bottom: 50px;
+    margin-top: -20%;
+  }
+}
+@media (max-width: 768px) {
+  /* line 242, ../sass/screen.scss */
+  #top #top-wrapper #top-container .top-button {
+    display: none;
+  }
+}
+/* line 247, ../sass/screen.scss */
+#top #top-wrapper #top-container .icons {
+  max-width: 350px;
+  position: relative;
+  margin: 0 auto;
+}
+/* line 251, ../sass/screen.scss */
+#top #top-wrapper #top-container .icons #ios {
+  cursor: pointer;
+  float: left;
+  margin-bottom: 10px;
+  display: none;
+}
+/* line 256, ../sass/screen.scss */
+#top #top-wrapper #top-container .icons #ios img {
+  height: 50px;
+}
+@media (max-width: 768px) {
+  /* line 251, ../sass/screen.scss */
+  #top #top-wrapper #top-container .icons #ios {
+    display: block;
+  }
+}
+/* line 263, ../sass/screen.scss */
+#top #top-wrapper #top-container .icons #android {
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+/* line 267, ../sass/screen.scss */
+#top #top-wrapper #top-container .icons #android img {
+  height: 50px;
+}
+@media (max-width: 768px) {
+  /* line 263, ../sass/screen.scss */
+  #top #top-wrapper #top-container .icons #android {
+    display: block;
+  }
+}
+/* line 280, ../sass/screen.scss */
+#top #top-wrapper #bgm {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+/* line 284, ../sass/screen.scss */
+#top #top-wrapper #bgm i {
+  cursor: pointer;
+}
+/* line 299, ../sass/screen.scss */
+#top #top-wrapper #facebook {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+/* line 303, ../sass/screen.scss */
+#top #top-wrapper #facebook img {
+  width: 30px;
+  height: 30px;
+}
+/* line 313, ../sass/screen.scss */
+#top #top-wrapper #twitter {
+  position: absolute;
+  top: 30px;
+  right: 100px;
+}
+/* line 317, ../sass/screen.scss */
+#top #top-wrapper #twitter img {
+  width: 30px;
+  height: 30px;
+}
+/* line 328, ../sass/screen.scss */
+#top #top-wrapper .scroll {
+  width: 70px;
+  height: 90px;
+  background: transparent url(../images/scroller.png) no-repeat 0 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 3%;
+  margin: 0 auto;
+  z-index: 9999;
+  display: none;
+}
+@media (max-width: 768px) {
+  /* line 328, ../sass/screen.scss */
+  #top #top-wrapper .scroll {
+    bottom: 10%;
+  }
+}
+@media (max-height: 768px) {
+  /* line 328, ../sass/screen.scss */
+  #top #top-wrapper .scroll {
+    bottom: 10%;
+  }
+}
+
+/* line 356, ../sass/screen.scss */
+#sub {
+  padding-top: 150px;
+}
+/* line 359, ../sass/screen.scss */
+#sub #download .icons {
+  cursor: pointer;
+  position: relative;
+  max-width: 500px;
+  height: 100px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  /* line 359, ../sass/screen.scss */
+  #sub #download .icons {
+    display: none;
+  }
+}
+/* line 370, ../sass/screen.scss */
+#sub #download .icons .android {
+  position: absolute;
+  right: 50px;
+}
+/* line 373, ../sass/screen.scss */
+#sub #download .icons .android img {
+  height: 50px;
+}
+/* line 377, ../sass/screen.scss */
+#sub #download .icons .ios {
+  position: absolute;
+  left: 50px;
+}
+/* line 380, ../sass/screen.scss */
+#sub #download .icons .ios img {
+  height: 50px;
+}
+/* line 385, ../sass/screen.scss */
+#sub #download .iconsMin {
+  display: none;
+  margin-top: 30px;
+}
+/* line 388, ../sass/screen.scss */
+#sub #download .iconsMin img {
+  height: 60px;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  /* line 385, ../sass/screen.scss */
+  #sub #download .iconsMin {
+    display: block;
+  }
+}
+/* line 399, ../sass/screen.scss */
+#sub .interval {
+  position: relative;
+  clear: both;
+  height: 250px;
+  width: 100%;
+  margin: 150px auto;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+/* line 407, ../sass/screen.scss */
+#sub .interval p {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 3.5rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 4rem;
+  opacity: 1.0;
+  text-shadow: 5px 5px 10px #000;
+}
+/* line 428, ../sass/screen.scss */
+#sub .interval1 {
+  background-image: url(../images/mesh.png), url(../images/tokyostation.jpg);
+}
+/* line 431, ../sass/screen.scss */
+#sub .interval2 {
+  background-image: url(../images/mesh.png), url(../images/koutoukukawaberi.jpg);
+}
+/* line 434, ../sass/screen.scss */
+#sub .interval_about {
+  background-image: url(../images/mesh.png), url(../images/marunouti.jpg);
+}
+/* line 437, ../sass/screen.scss */
+#sub .interval_usage {
+  background-image: url(../images/mesh.png), url(../images/marunouti.jpg);
+}
+
+/* line 456, ../sass/screen.scss */
+footer {
+  clear: both;
+  height: 200px;
+  width: 100%;
+  position: relative;
+  background-color: #111;
+  color: #fff;
+  font-size: .8rem;
+  margin-top: 200px;
+}
+/* line 465, ../sass/screen.scss */
+footer #footer-left {
+  float: left;
+  text-align: left;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+/* line 470, ../sass/screen.scss */
+footer #footer-left div {
+  padding: 10px 0;
+}
+/* line 472, ../sass/screen.scss */
+footer #footer-left div a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+/* line 477, ../sass/screen.scss */
+footer #footer-left div:last-child {
+  margin-top: 20px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+/* line 499, ../sass/screen.scss */
+footer #footer-right {
+  cursor: pointer;
+  color: #fff;
+  margin-right: 50px;
+  margin-top: 20px;
+  padding: 10px 0;
+  float: right;
+}
+/* line 506, ../sass/screen.scss */
+footer #footer-right a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+}

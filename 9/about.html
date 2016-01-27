@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+	<title>Mental Energy</title>
+	<link rel="stylesheet" href="css/jquery.fitbar.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/drawer.min.css">
+	<link rel="stylesheet" href="css/screen.css">
+<style>
+	#sub{
+		padding-top: 65px;
+	}
+</style>
+</head>
+
+<body class="drawer drawer-right">
+
+
+<div id="menu">
+	<header>
+		<div class="wrapper">
+			<div id="title"><a href="index.html">MENTAL ENERGY</a></div>
+			<nav id="nav_pc">
+				<ul id="menu_pc">
+					<li><a href="about.html">about</a></li>
+					<li><a href="usage.html">usage</a></li>
+					<li><a href="about.html">download</a></li>
+					<li><a href="about.html" style="color:#fff;">login</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+	
+	<div id="nav_mobile">
+		<div class="drawer-toggle drawer-hamburger">
+		        <span class="sr-only"></span> 
+				<span class="drawer-hamburger-icon"></span>
+		</div>
+		<div class="drawer-main drawer-default">
+			<nav class="drawer-nav" role="navigation">
+				<ul id="menu_mobile" class="nav drawer-nav-list">
+					<li><a href="">MENU</a></li>
+					<li><a href="about.html">about<br><span>本サービスについて</span></a></li>
+					<li><a href="usage.html">usage<br><span>使用方法</span></a></li>
+					<li><a href="about.html">download<br><span>ダウンロード</span></a></li>
+					<li><a href="about.html">login<br><span>ログイン</span></a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div><!-- menu -->
+
+<div id="sub">
+
+<div class="interval interval_about" style="margin-top:1px;">
+	<p>ABOUT</p>
+</div>
+
+	<section class="fadeInDown">
+		<div id="about">
+			<div class="sectionTitles">
+				<p>ルールを定め、迷わない</p>
+			</div>
+			<div id="aboutContents">
+				<p>メンタル・エナジーとは人間の集中力や意志力のことです。<br>
+					この力は１日のうちで使える量に限りがあり、<br>
+					日常の何気ない意思決定のたびに減っていきます。<br>
+					<br>
+					何を食べるのか、何を着るのか、何のテレビを見るのか、<br>
+					そんな些細な意思決定のたびにメンタル・エナジーは減っていきます。<br>
+					<br>
+					故スティーブ・ジョブズは約１０年間ほぼ毎日、<br>
+					ISSEY MIYAKE のタートルネック、Levi’s のジーンズ、<br>
+					New Balance のスニーカーを着用してきました。<br>
+					<br>
+					ビジネスの重要な局面での意思決定のため、<br>
+					好きではないけれどやらなければならないことを<br>
+					ルーティン化（＝自動化）して、<br>
+					メンタル・エナジーを温存してきたのです。<br>
+					<br>
+					ユーザーの皆様には、<br>
+					本サービス「MENTAL ENERGY」を通じて、<br>
+					日常の些細な意思決定をルーティン化するための<br>
+					ルールづくりと管理を行っていただきます。<br>
+					<br>
+					好きなことでクリエイティビティーを発揮するために、<br>
+					ビジネスや人生の重要な判断を誤らないために、<br>
+					今日から「MENTAL ENERGY」を始めましょう。</p>
+			</div>
+		</div><!-- about -->
+	</section>
+
+</div><!-- sub -->
+
+
+<footer>
+	<div id="footer-left">
+		<div id="contact"><a href="">お問い合わせ</a></div>
+		<div id="sitemap"><a href="">サイトマップ</a></div>
+		<div id="privacy"><a href="">プライバシーポリシー</a></div>
+		<div>
+			<small>&copy; 2015 Mochizuki Kazuki Allrights Reserved.</small>
+		</div>
+	</div>
+	<div id="footer-right">
+		<div id="topPage"><a href="#"><div class="sankaku"></div>back to top</a></div>
+	</div>
+</footer>
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.fitbar.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+<script src="http://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
+<script src="js/jquery.drawer.min.js"></script>
+<script src="js/backstretch.js"></script>
+<script src="js/main.js"></script>
+<script>
+
+// ドロワーメニュー
+$(document).ready(function() {
+  $(".drawer").drawer();
+});
+
+window.onload = init;
+function init(){
+	$('.interval').addClass("fadeIn");
+}
+
+
+
+</script>
+</body>
+</html>
+

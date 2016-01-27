@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+	<title>Mental Energy</title>
+	<link rel="stylesheet" href="css/jquery.fitbar.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/drawer.min.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/screen.css">
+	<style>
+		.interval p{
+			font-weight: 400;
+			font-style: normal;
+		}
+		#stpes{
+			position: relative;
+			text-align: left;
+			width: 500px;
+			line-height: 2rem;
+		}
+		#step1{
+			max-width: 600px;
+			margin: 0 auto;
+		}
+		#stpes #step1 div{
+			float: left;
+		}
+		#stpes #step1 div:last-child{
+			float: right;
+		}
+
+	</style>
+</head>
+
+<body class="drawer drawer-right">
+
+
+<header>
+	<div class="tool">
+		<div id="title"><a href="index.html">MENTAL ENERGY</a></div>
+		<div>
+			<nav id="nav_pc">
+				<ul id="menu_pc">
+					<li><a href="about.html">about</a></li>
+					<li><a href="usage.html">usage</a></li>
+					<li><a href="about.html">download</a></li>
+					<li><a href="about.html">contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+
+<div id="nav_mobile">
+	<div class="drawer-toggle drawer-hamburger">
+	        <span class="sr-only"></span> 
+			<span class="drawer-hamburger-icon"></span>
+	</div>
+	<div class="drawer-main drawer-default">
+		<nav class="drawer-nav" role="navigation">
+			<ul id="menu_mobile" class="nav drawer-nav-list">
+				<li><a href="about.html">about</a></li>
+				<li><a href="usage.html">usage</a></li>
+				<li><a href="about.html">download</a></li>
+				<li><a href="about.html">contact</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+
+<div class="interval" style="margin-top:1px;">
+	<p>USAGE</p>
+</div>
+
+
+<div id="wrapper">
+
+	<section class="fadeInDown">
+		<div id="usage">
+			<div class="sectionTitles">
+				<p>毎日使うことが大切</p>
+			</div>
+			<div id="usageContents">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ex quaerat, corporis nihil cumque minima vitae magni doloremque odio placeat excepturi ducimus optio harum, repudiandae incidunt, ullam consequuntur, inventore laborum!
+					</p>
+			</div>
+		</div><!-- about -->
+	</section>
+
+	<section id="stpes">
+		<div id="step1">
+			<div>
+				<p>優先的に時間を割きたいものを決めます。</p>
+				<p>例）<br>
+					１.仕事<br>
+					２.料理<br>
+					３.音楽活動</p>
+				<p>※毎月更新することをお勧めします。</p>
+			</div>
+			<div>
+				<img src="images/iphone.png" width="200" alt="">
+			</div>
+		</div>
+	</section>
+
+</div><!-- wrapper -->
+
+
+<footer>
+	<small>
+		&copy; 2015 Mochizuki Kazuki Allrights Reserved.
+	</small>
+</footer>
+
+
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.fitbar.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.1/iscroll-min.js"></script>
+<script src="http://cdn.rawgit.com/ungki/bootstrap.dropdown/3.3.1/dropdown.min.js"></script>
+<script src="js/jquery.drawer.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+//ナビの上部固定
+$('div.tool').fitbar({
+    position : 'top',
+    effect : false
+});
+
+//ドロワーメニュー
+$(document).ready(function() {
+  $(".drawer").drawer();
+});
+
+
+
+</script>
+</body>
+</html>

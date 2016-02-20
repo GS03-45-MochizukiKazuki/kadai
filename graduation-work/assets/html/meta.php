@@ -1,15 +1,17 @@
 <?php
-$description =  "ライフハックサービス「メンタルエナジー」！決断を減らす、迷わない人生へ。";
+$description = "ライフハックサービス「メンタルエナジー」！決断を減らす、迷わない人生へ。";
 $keyword = "メンタルエナジー,mentalenergy,ライフハック";
 $siteTitle = "MentalEnergy";
 $creator = "@mo4_9";
+$ogp = "http://mental-energy.com/images/ogp.png";
+$url = "http://mental-energy.com/";
 ?>
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 	<meta charset="UTF-8">
-	<title><?=htmlenc($title)?></title>
+	<title><?= htmlenc($title) ?></title>
 	<meta name="description" content= <?= $description ?> />
 	<meta name="keywords" content= <?= $keyword ?> />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -18,7 +20,7 @@ $creator = "@mo4_9";
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content= <?= $siteTitle ?> />
 	<meta name="twitter:description" content= <?= $description ?> />
-	<meta name="twitter:image" content="http://mental-energy.com/images/ogp.png">
+	<meta name="twitter:image" content= <?= $ogp ?> />
 	<meta name="twitter:site" content= <?= $creator ?> />
 	<meta name="twitter:creator" content= <?= $creator ?> />
 
@@ -26,8 +28,8 @@ $creator = "@mo4_9";
 	<meta property="fb:app_id" content="id" />
 	<meta property="og:type" content="website">
 	<meta property="og:title" content= <?= $siteTitle ?> />
-	<meta property="og:image" content="http://mental-energy.com/images/ogp.png">
-	<meta property="og:url" content="http://mental-energy.com/">
+	<meta property="og:image" content= <?= $ogp ?> />
+	<meta property="og:url" content= <?= $url ?> />
 	<meta property="og:site_name" content= <?= $siteTitle ?> />
 	<meta property="og:description" content= <?= $description ?> />
 	<meta property="og:locale" content="ja_JP">
@@ -36,7 +38,7 @@ $creator = "@mo4_9";
 	<link rel="shortcut icon" href="img/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 <body>
 <div id="fb-root"></div>

@@ -3,11 +3,11 @@ header("Content-Type: text/html; charaset=UTF-8"); // 文字化け対策
 
 session_start(); 
 
-include("include/func.php");
+include("assets/func.php");
 
 $title = "Mental Energy | APP"; 
 
-include("../assets/html/meta.php");
+include("assets/html/meta.php");
 
 ?>
 <style type="text/css">

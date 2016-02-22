@@ -1,8 +1,8 @@
 <?php 
-include("include/func.php");
+include("assets/func.php");
 
 $title = "Mental Energy | TOP"; 
-include("include/html/meta.php");
+include("assets/html/meta.php");
 
 ?>
 
@@ -10,13 +10,13 @@ include("include/html/meta.php");
 	<nav class="header__nav">
 		<ul class="header__list">
 			<li class="header__item header__item1">
-				<a class="header__link" href="">app</a>
+				<a class="header__link" href="app.php">app</a>
 			</li>
 			<li class="header__item header__item2">
-				<a class="header__link" href="">about</a>
+				<a class="header__link" href="#about">about</a>
 			</li>
 			<li class="header__item header__item3">
-				<a class="header__link" href="">login</a>
+				<a class="header__link" href="login.php">login</a>
 			</li>
 		</ul>
 	</nav>
@@ -30,5 +30,5 @@ include("include/html/meta.php");
 
 
 <?php 
-include("include/html/footer.php");
+include("assets/html/footer.php");
 ?>

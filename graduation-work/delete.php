@@ -1,5 +1,5 @@
 <?php
-include('include/func.php');
+include('assets/func.php');
 
 $did = $_GET['delid'];
 

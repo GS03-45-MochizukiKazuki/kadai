@@ -1,0 +1,20 @@
+{
+  "name": "mental-energy",
+  "version": "1.0.0",
+  "description": "メンタルエナジー",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mental-energy"
+  ],
+  "author": "kazuki mochizuki",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-sass": "^2.2.0",
+    "imagemin-pngquant": "^4.2.2"
+  }
+}

@@ -15,7 +15,7 @@ gulp.task('sass:watch', function () {
 
 // image
 gulp.task("imagemin", function() {
-    gulp.watch("./src/img/*", function() {   
+    gulp.watch("./src/img/*.{png,jpg,gif}", function() {   
         gulp.src("./src/img/*.{png,jpg,gif}")
             .pipe(imagemin({
             	progressive: true,

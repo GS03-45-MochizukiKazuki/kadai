@@ -1,5 +1,5 @@
 <?php
-include('assets/func.php');
+include('../src/assets/func.php');
 
 //入力チェック
 if(
@@ -35,7 +35,7 @@ dbExecError($status,$stmt);
 
 //4．データ登録処理後
 //フォームの再送信を防げる
-header("Location: index.php");
+header("Location: app.php");
 exit;
 
 ?>

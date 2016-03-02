@@ -1,6 +1,60 @@
 html, body {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  font-size: 0.9rem; }
 
-footer {
-  text-align: center; }
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: #dd4b39; }
+  .header__logo {
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30px, 30px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/logo-app.png);
+    margin: 10px 0 0 15px; }
+    .header__logo a {
+      display: block;
+      height: 100%; }
+  .header__list {
+    float: right; }
+  .header__item {
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 20px;
+    font-size: .8rem; }
+  .header__link {
+    text-decoration: none;
+    color: #fff; }
+
+.footer {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  background-color: #272727;
+  position: absolute;
+  bottom: 0; }
+  .footer__copy {
+    line-height: 50px; }
+
+.is-editing {
+  width: 100px;
+  height: 2rem;
+  display: block;
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+table {
+  table-layout: fixed; }
+
+td {
+  width: 100px;
+  height: 30px; }
+
+.js-highlight td, td.js-highlight {
+  background: #E8E8E8; }

@@ -1,23 +1,41 @@
-$phone: "only screen and (max-width: 480px)";
-$tablet: "only screen and (max-width: 768px)";
+@import 'src/sass/components/define.scss';
 
-@media #{$phone} {
 
-}
-
-$main_color: #dd4b39;
-$sub_color: #f96b5e;
-$font_color: #555;
-
-html, body{
+.header{
 	width: 100%;
-	height: 100%;
+	height: 80px;
+	&__logo{
+		float: left;
+		@include setImg(200, 50);
+		background-image: url(../img/logo-top.png);
+		margin: 15px 0 0 15px;
+	}
+	&__list{
+		float: right;
+	}
+	&__item{
+		display: inline-block;
+		line-height: 80px;
+		margin-right: 20px;
+		font-size: .9rem;
+		font-weight: bold;
+	}
+	&__link{
+		text-decoration: none;
+		color: #000;
+	}
 }
 
-footer{
+.footer{
 	text-align: center;
+	width: 100%;
+	height: 100px;
+	color: #fff;
+	background-color: #272727;
+	position: absolute;
+	bottom: 0;
+	&__copy{
+		line-height: 100px;
+	}
 }
-
-
-
 

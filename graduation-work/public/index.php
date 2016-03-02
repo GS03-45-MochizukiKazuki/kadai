@@ -1,12 +1,15 @@
 <?php 
-include("assets/func.php");
+include("../src/assets/func.php");
 
 $title = "Mental Energy | TOP"; 
-include("assets/html/meta.php");
+$cssHref = "top.css";
+
+include("../src/assets/html/meta.php");
 
 ?>
 
 <header class="header">
+	<div class="header__logo"></div>
 	<nav class="header__nav">
 		<ul class="header__list">
 			<li class="header__item header__item1">
@@ -30,5 +33,5 @@ include("assets/html/meta.php");
 
 
 <?php 
-include("assets/html/footer.php");
+include("../src/assets/html/footer.php");
 ?>

@@ -1,5 +1,5 @@
 <?php
-include('assets/func.php');
+include("../src/assets/func.php");
 
 $did = $_GET['delid'];
 
@@ -24,7 +24,7 @@ if($status==false){
   $error = $stmt->errorInfo();
   exit("QueryError:".$error[2]);
 }else{
-  header("Location: index.php");
+  header("Location: app.php");
   exit;
 
 }

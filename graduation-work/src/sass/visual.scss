@@ -1,23 +1,2 @@
-$phone: "only screen and (max-width: 480px)";
-$tablet: "only screen and (max-width: 768px)";
-
-@media #{$phone} {
-
-}
-
-$main_color: #dd4b39;
-$sub_color: #f96b5e;
-$font_color: #555;
-
-html, body{
-	width: 100%;
-	height: 100%;
-}
-
-footer{
-	text-align: center;
-}
-
-
-
-
+@import 'src/sass/components/define.scss';
+@import 'src/sass/components/style.scss';

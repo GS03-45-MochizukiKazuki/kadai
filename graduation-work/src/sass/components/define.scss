@@ -1,0 +1,39 @@
+$phone: "only screen and (max-width: 480px)";
+$tablet: "only screen and (max-width: 768px)";
+
+@media #{$phone} {
+
+}
+
+
+html, body{
+	width: 100%;
+	height: 100%;
+	font-size: 0.9rem;
+}
+
+
+$main_color: #dd4b39; // 赤
+$sub_color: #f96b5e; // オレンジ
+$font_color: #555; // グレー
+$bg_color: #272727; // グレー
+
+
+// pc版 
+@mixin setImg($w: 300, $h: 300){
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: $w + px, $h + px;
+    width: $w + px;
+    height: $h + px;
+}
+// sp版 
+@mixin setImgSp($w: 300, $h: 300){
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: $w/2 + px , $h/2 + px ;
+    width: $w/2 + px ;
+    height: $h/2 + px ;
+}
+
+

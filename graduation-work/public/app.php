@@ -3,47 +3,22 @@ header("Content-Type: text/html; charaset=UTF-8"); // 文字化け対策
 
 session_start(); 
 
-include("assets/func.php");
+include("../src/assets/func.php");
 
 $title = "Mental Energy | APP"; 
+$cssHref = "app.css";
 
-include("assets/html/meta.php");
+include("../src/assets/html/meta.php");
+
+include("../src/assets/html/header.php");
 
 ?>
-<style type="text/css">
-	td{
-		width: 100px;
-		height: auto;
-	}
-	.is-editing{
-		width: 100%;
-		height: 100%;
-	}
-</style>
+
+
+
 
 <?php
 $db = db();
-
-//追加ボタン＝保存ボタン
-// if(isset($_POST["insert"])){
-// 	$genre = $_POST["genre"];
-// 	$scene = $_POST["scene"];
-// 	$action = $_POST["action"];
-// 	$qry ="INSERT INTO me_an_table(genre, scene, action, indate) VALUES(:a1, :a2, :a3, sysdate())";
-// 	$stmt = $db->prepare($qry);
-// 	$stmt->bindValue(":a1", $genre);
-// 	$stmt->bindValue(":a2", $scene);
-// 	$stmt->bindValue(":a3", $action);
-// 	$stmt->execute();
-// }
-//削除ボタン
-// if(isset($_POST["delete"])){
-// 	$did = $_POST["delid"];
-// 	$qry ="DELETE FROM me_an_table WHERE id = :did";
-// 	$stmt = $db->prepare($qry);
-// 	$stmt->bindValue(":did", $did);
-// 	$stmt->execute();
-// }
 
 $qry = "SELECT * FROM me_an_table";
 $data = $db->query($qry);
@@ -52,7 +27,7 @@ $data = $db->query($qry);
 
 <h2>ルール登録</h2>
 
-<!-- <form action="http://mo49.tokyo/mental_energy/app/" method="post"> -->
+<!-- insert -->
 <form action="insert.php" method="post">
 ジャンル：<input type="text" name="genre"/><br/>
 シーン：<input type="text" name="scene"/><br/>
@@ -87,7 +62,7 @@ $data = $db->query($qry);
 		// 削除ボタンのvalueに行と同じID番号を振る
 		print "<tr class=\"editable-tr\">
 					<td><input type=\"radio\" name=\"delid\" value=\"{$id}\"/></td>
-			        <td>{$genre}</td><td class=\"editable-td\">{$scene}</td><td class=\"editable-td\">{$action}</td><td>{$evaluation}</td>
+			        <td>{$genre}</td><td class=\"editable-td editable-td1\">{$scene}</td><td class=\"editable-td editable-td2\">{$action}</td><td>{$evaluation}</td>
 		    	</tr>\n";
 	}
 	$db = null;
@@ -99,9 +74,11 @@ $data = $db->query($qry);
 </form>
 
 
+
+
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="js/TextEdit.js"></script>
+<script src="js/textEdit.js"></script>
 
-
-</body>
-</html>
+<?php 
+include("../src/assets/html/footer.php");
+?>

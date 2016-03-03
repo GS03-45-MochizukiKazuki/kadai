@@ -3,14 +3,14 @@ header("Content-Type: text/html; charaset=UTF-8"); // 文字化け対策
 
 session_start(); 
 
-include("../src/assets/func.php");
+include("assets/func.php");
 
 $title = "Mental Energy | APP"; 
 $cssHref = "app.css";
 
-include("../src/assets/html/meta.php");
+include("assets/html/meta.php");
 
-include("../src/assets/html/header.php");
+include("assets/html/header.php");
 
 ?>
 
@@ -80,5 +80,5 @@ $data = $db->query($qry);
 <script src="js/textEdit.js"></script>
 
 <?php 
-include("../src/assets/html/footer.php");
+include("assets/html/footer.php");
 ?>

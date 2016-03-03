@@ -1,10 +1,10 @@
 <?php 
-include("../src/assets/func.php");
+include("assets/func.php");
 
 $title = "Mental Energy | TOP"; 
 $cssHref = "top.css";
 
-include("../src/assets/html/meta.php");
+include("assets/html/meta.php");
 
 ?>
 
@@ -33,5 +33,5 @@ include("../src/assets/html/meta.php");
 
 
 <?php 
-include("../src/assets/html/footer.php");
+include("assets/html/footer.php");
 ?>

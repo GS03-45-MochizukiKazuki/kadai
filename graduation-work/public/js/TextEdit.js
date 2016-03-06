@@ -20,7 +20,8 @@ function edit_toggle(){
         console.log($(this).attr('class'));
         var $old_val = $(this).text();
         console.log($old_val);
-        var $tr = $("<tr class='js-added_tr'></tr>");
+        var $tr = $("<tr class='js-added_tr'><td></td></tr>");
+        var $tr_colspan = $("<td colspan=\"2\"></td>");
 
         var $selected_id = $(this).parent().find('input[name="delid"]').val();
         console.log($selected_id);
@@ -31,15 +32,16 @@ function edit_toggle(){
             $input.attr('name', 'action');
         }
         var $form = $("<form action='update.php' method='post'></form>");
-        var $submit = $("<input type='submit' name='update' class='submit-btn' value='保存'/>");
-        var $cancel = $("<input type='button' name='cancel' class='cancel-btn' value='キャンセル'/>");
-        var $id_hidden = $("<input type='hidden' name='id' value='"+$selected_id+"'/>")
+        var $submit = $("<input type='submit' name='update' class='todo__submit-btn' value='保存'/>");
+        var $cancel = $("<input type='button' name='cancel' class='todo__cancel-btn' value='キャンセル'/>");
+        var $id_hidden = $("<input type='hidden' name='id' value='"+$selected_id+"'/>");
         // $form.append($input);
         // tr > form > submit, cancel
         $('table').wrap($form);
-        $tr.append($submit);
-        $tr.append($cancel);
-        $tr.append($id_hidden);
+        $tr.append($tr_colspan);
+        $tr_colspan.append($submit);
+        $tr_colspan.append($cancel);
+        $tr_colspan.append($id_hidden);
         // $tr.append($form);
         // $(this).parent().parent().wrap($form); // tbodyを囲う
         $(this).html($input); // tdの中にinput
@@ -57,7 +59,7 @@ function edit_toggle(){
     	// });
 
         // キャンセルボタン
-        $('.cancel-btn').on('click', function(){
+        $('.todo__cancel-btn').on('click', function(){
             // $(this).after($(this).val()).remove(); 
             // var value = $input.val();
             // var value = $(this).parent().find('input[type=text]').val();
@@ -84,25 +86,25 @@ function edit_toggle(){
 /* ======================================
  * テーブルハイライト
  * ====================================== */
-$(function(){
-    // セルをマウスオーバー
-    $("td").hover(function(){
-        // 横
-        // 親要素（tr要素）にtargetクラスを追加
-        $(this).parent().addClass("js-highlight");
+// セルをマウスオーバー
+$(".editable-td").hover(function(){
+    // 横
+    // 親要素（tr要素）にtargetクラスを追加
+    $(this).parent().find(".editable-td").addClass("js-highlight");
+   
 
-        // 縦
-        // 親要素から見て、自分が何番目の子要素なのか調べる
-        var myIndex = $(this).index() + 1;
-                    
-        // 各行の「myIndex番目の子要素」にjs-highlightクラスを追加する
-        $("td:nth-child("+ myIndex +")").addClass("js-highlight");
+    // 縦
+    // 親要素から見て、自分が何番目の子要素なのか調べる
+    // var myIndex = $(this).index() + 1;
+                
+    // // 各行の「myIndex番目の子要素」にjs-highlightクラスを追加する
+    // $("td:nth-child("+ myIndex +")").addClass("js-highlight");
 
-    }, function(){
-        // マウスアウト時にjs-highlightクラスを削除
-        $(".js-highlight").removeClass("js-highlight");
-    });
+}, function(){
+    // マウスアウト時にjs-highlightクラスを削除
+    $(".js-highlight").removeClass("js-highlight");
 });
+
 
 
 

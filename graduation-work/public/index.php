@@ -2,7 +2,7 @@
 include("assets/func.php");
 
 $title = "Mental Energy | TOP"; 
-$cssHref = "top.css";
+$css_href = "top.css";
 
 include("assets/html/meta.php");
 

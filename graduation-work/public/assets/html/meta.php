@@ -38,8 +38,9 @@ $url = "http://mental-energy.com/";
 	<link rel="shortcut icon" href="img/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/<?= $cssHref ?>">
+	<link rel="stylesheet" href="css/<?= $css_href ?>">
 	<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+
 </head>
 <body>
 <div id="fb-root"></div>

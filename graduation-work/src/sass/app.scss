@@ -1,24 +1,206 @@
 @import 'src/sass/components/style.scss';
 
 
+$z-content-right: 999;
+
+$bar_color: #888;
+
+
+.header-bg{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	top: 0;
+	left: 0;
+	background-color: $main_color;
+}
+
+
+.wrapper{
+	// padding: 0 15px;
+	max-width: 730px;
+	position: relative;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.is-active{
+	font-weight: bold;
+}
+
+
+h2{
+	font-size: 15px;
+	display: inline-block;
+}
+.fa{
+	margin-right: 5px;
+}
+
+
+.content-left{
+	position: absolute;
+	background-color: #f8f8f8;
+	// width: 230px;
+	height: 100%;
+	float: left;
+}
+.content-right{
+	position: relative;
+	float: right;
+	max-width: 500px;
+	width: 70%;
+	height: 100%;
+	background-color: #fff;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.4);
+	z-index: $z-content-right;
+}
+.content-left__wrapper{
+	padding: 10px 0 0 15px;
+}
+
+.content-right__wrapper{
+	padding: 13px 15px 0 0;
+	margin-left: 30px;
+}
+
+
+.rule{
+	margin-bottom: 20px;
+	width: 200px;
+	border-bottom: 1px $bar_color solid;
+	padding: 15px 0 15px 0;
+	&__list{
+
+	}
+	&__item{
+		margin-bottom: 10px;
+		cursor: pointer;
+	}
+}
+
+/* ======================================
+ * genre
+ * ====================================== */
+
+.genre{
+	width: 200px;
+	&__list{
+		margin-bottom: 30px;
+	}
+	&__item{
+		height: 20px;
+		width: 100%;
+		margin: 8px auto;
+		cursor: pointer;
+	}
+	&__color{
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		border-radius: 50% 50%;
+		margin-right: 10px;
+	}
+	&__delete{
+		margin-left: 5px;
+		visibility: hidden;
+	}
+}
+.genre__item:hover{
+	.genre__txt{
+		font-weight: bold;
+	}
+	.genre__delete{
+		visibility: visible;
+	}
+}
+
+
+/* ======================================
+ * todoリスト
+ * ====================================== */
+
+.js-added_tr{
+	position: relative;
+	width: 100vw;
+}
+.todo__submit-btn{
+	display: inline-block;
+	margin-right: 5px;
+}
+.todo__cancel-btn{
+	display: inline-block;
+}
+
+.todo__table{
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.todo__th{
+	height: 20px;
+	line-height: 20px;
+	font-size: 10px;
+}
+.todo__tr{
+	border-bottom: $bar_color 1px solid; 
+}
+.editable-td{
+	padding: 3px;
+}
+.editable-tr{
+	border-bottom: #ccc 1px dotted; 
+}
+
+
+/* ======================================
+ * テーブル編集、ハイライト
+ * ====================================== */
 .is-editing{
-	width: 100px;
-	height: 2rem;
+	// width: 100px;
+	width: 100%;
+	height: 100%;
 	display: block;
 	border: none;
 	margin: 0;
 	padding: 0;
+	word-wrap: break-word;
 }
 table{
 	table-layout:fixed;
 }
 
+td:first-child{
+	width: 10px;
+}
 td{
-	width: 100px;
+	// width: 100%;
+	width: 48%;
 	// height: 100%;
 	height: 30px;
+	cursor: text;
 }
 
 .js-highlight td, td.js-highlight{
-    background:#E8E8E8;
+    background:#f8f8f8;
+}
+
+
+/* ======================================
+ * clearfix
+ * ====================================== */
+
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
 }

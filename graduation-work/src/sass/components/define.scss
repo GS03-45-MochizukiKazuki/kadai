@@ -6,17 +6,20 @@ $tablet: "only screen and (max-width: 768px)";
 }
 
 
-html, body{
-	width: 100%;
-	height: 100%;
-	font-size: 0.9rem;
-}
-
-
 $main_color: #dd4b39; // 赤
 $sub_color: #f96b5e; // オレンジ
-$font_color: #555; // グレー
+$font_color: #333; // グレー
 $bg_color: #272727; // グレー
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-family: Helvetica , "游ゴシック" , "Yu Gothic" , sans-serif;
+    color: $font_color;
+    background-color: #f8f8f8;
+}
 
 
 // pc版 

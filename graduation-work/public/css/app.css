@@ -1,12 +1,20 @@
+@charset "UTF-8";
 html, body {
   width: 100%;
   height: 100%;
-  font-size: 0.9rem; }
+  font-size: 12px;
+  font-family: Helvetica , "游ゴシック" , "Yu Gothic" , sans-serif;
+  color: #333;
+  background-color: #f8f8f8; }
 
 .header {
   width: 100%;
   height: 50px;
-  background-color: #dd4b39; }
+  background-color: #dd4b39;
+  max-width: 730px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 9999; }
   .header__logo {
     float: left;
     background-repeat: no-repeat;
@@ -24,11 +32,15 @@ html, body {
   .header__item {
     display: inline-block;
     line-height: 50px;
-    margin-right: 20px;
+    margin: 0 10px;
     font-size: .8rem; }
   .header__link {
     text-decoration: none;
     color: #fff; }
+  .header i {
+    color: #fff;
+    vertical-align: sub;
+    cursor: pointer; }
 
 .footer {
   text-align: center;
@@ -36,25 +48,167 @@ html, body {
   height: 50px;
   color: #fff;
   background-color: #272727;
-  position: absolute;
-  bottom: 0; }
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 9999; }
   .footer__copy {
     line-height: 50px; }
 
+.header-bg {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background-color: #dd4b39; }
+
+.wrapper {
+  max-width: 730px;
+  position: relative;
+  margin: 0 auto;
+  height: 100%; }
+
+.is-active {
+  font-weight: bold; }
+
+h2 {
+  font-size: 15px;
+  display: inline-block; }
+
+.fa {
+  margin-right: 5px; }
+
+.content-left {
+  position: absolute;
+  background-color: #f8f8f8;
+  height: 100%;
+  float: left; }
+
+.content-right {
+  position: relative;
+  float: right;
+  max-width: 500px;
+  width: 70%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4);
+  z-index: 999; }
+
+.content-left__wrapper {
+  padding: 10px 0 0 15px; }
+
+.content-right__wrapper {
+  padding: 13px 15px 0 0;
+  margin-left: 30px; }
+
+.rule {
+  margin-bottom: 20px;
+  width: 200px;
+  border-bottom: 1px #888 solid;
+  padding: 15px 0 15px 0; }
+  .rule__item {
+    margin-bottom: 10px;
+    cursor: pointer; }
+
+/* ======================================
+ * genre
+ * ====================================== */
+.genre {
+  width: 200px; }
+  .genre__list {
+    margin-bottom: 30px; }
+  .genre__item {
+    height: 20px;
+    width: 100%;
+    margin: 8px auto;
+    cursor: pointer; }
+  .genre__color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50% 50%;
+    margin-right: 10px; }
+  .genre__delete {
+    margin-left: 5px;
+    visibility: hidden; }
+
+.genre__item:hover .genre__txt {
+  font-weight: bold; }
+
+.genre__item:hover .genre__delete {
+  visibility: visible; }
+
+/* ======================================
+ * todoリスト
+ * ====================================== */
+.js-added_tr {
+  position: relative;
+  width: 100vw; }
+
+.todo__submit-btn {
+  display: inline-block;
+  margin-right: 5px; }
+
+.todo__cancel-btn {
+  display: inline-block; }
+
+.todo__table {
+  margin-top: 20px;
+  margin-bottom: 30px; }
+
+.todo__th {
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px; }
+
+.todo__tr {
+  border-bottom: #888 1px solid; }
+
+.editable-td {
+  padding: 3px; }
+
+.editable-tr {
+  border-bottom: #ccc 1px dotted; }
+
+/* ======================================
+ * テーブル編集、ハイライト
+ * ====================================== */
 .is-editing {
-  width: 100px;
-  height: 2rem;
+  width: 100%;
+  height: 100%;
   display: block;
   border: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  word-wrap: break-word; }
 
 table {
   table-layout: fixed; }
 
+td:first-child {
+  width: 10px; }
+
 td {
-  width: 100px;
-  height: 30px; }
+  width: 48%;
+  height: 30px;
+  cursor: text; }
 
 .js-highlight td, td.js-highlight {
-  background: #E8E8E8; }
+  background: #f8f8f8; }
+
+/* ======================================
+ * clearfix
+ * ====================================== */
+/* For modern browsers */
+.cf:before,
+.cf:after {
+  content: "";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+  zoom: 1; }

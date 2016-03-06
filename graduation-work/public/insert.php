@@ -1,9 +1,10 @@
 <?php
 include('assets/func.php');
 
+// ジャンルIDで紐付ける
 //入力チェック
 if(
-  !isset($_POST["genre"]) || $_POST["genre"]=="" ||
+  // !isset($_POST["genre"]) || $_POST["genre"]=="" ||
   !isset($_POST["scene"]) || $_POST["scene"]=="" ||
   !isset($_POST["action"]) || $_POST["action"]==""
 ){
@@ -11,7 +12,7 @@ if(
 }
 
 //POSTデータ取得
-$genre   = $_POST["genre"];
+// $genre   = $_POST["genre"];
 $scene   = $_POST["scene"];
 $action  = $_POST["action"];
 
@@ -22,11 +23,11 @@ $action  = $_POST["action"];
 $pdo = db();
 
 //2．データ登録SQL作成
-$stmt = $pdo->prepare("INSERT INTO me_an_table(genre, scene, action,
-indate )VALUES(:a1, :a2, :a3, sysdate())");
-$stmt->bindValue(':a1', $genre);
-$stmt->bindValue(':a2', $scene);
-$stmt->bindValue(':a3', $action);
+$stmt = $pdo->prepare("INSERT INTO me_an_table(scene, action,
+indate )VALUES(:a1, :a2, sysdate())");
+// $stmt->bindValue(':a1', $genre);
+$stmt->bindValue(':a1', $scene);
+$stmt->bindValue(':a2', $action);
 // $stmt->bindValue(':a4', $evaluation);
 $status = $stmt->execute();
 

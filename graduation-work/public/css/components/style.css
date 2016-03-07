@@ -33,6 +33,7 @@ html, body {
     display: inline-block;
     line-height: 50px;
     margin: 0 10px;
+    font-size: 12px;
     font-size: .8rem; }
   .header__link {
     text-decoration: none;

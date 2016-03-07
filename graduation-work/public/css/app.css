@@ -33,6 +33,7 @@ html, body {
     display: inline-block;
     line-height: 50px;
     margin: 0 10px;
+    font-size: 12px;
     font-size: .8rem; }
   .header__link {
     text-decoration: none;
@@ -144,7 +145,7 @@ h2 {
  * ====================================== */
 .js-added_tr {
   position: relative;
-  width: 100vw; }
+  width: 100%; }
 
 .todo__submit-btn {
   display: inline-block;
@@ -155,7 +156,9 @@ h2 {
 
 .todo__table {
   margin-top: 20px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  table-layout: fixed;
+  border-collapse: collapse; }
 
 .todo__th {
   height: 20px;

@@ -1,11 +1,19 @@
 @import 'src/sass/components/define.scss';
 
 
+$z-mesh: 999;
+$z-dark_mesh: 990;
+
+$main_height: 350px;
+
+
+
 .header{
 	width: 100%;
 	height: 80px;
 	max-width: 730px;
 	margin: 0 auto;
+	background-color: #f3f3f3;
 	&__logo{
 		float: left;
 		@include setImg(200, 50);
@@ -29,13 +37,58 @@
 	}
 }
 
+.main{
+	position: relative;
+	overflow: hidden;
+	&__mesh{
+		width: 100%;
+		height: $main_height;
+		background-image: url(../img/mesh.png);
+		background-repeat: repeat;
+		position: absolute;
+		z-index: $z-mesh;
+	}
+	&__dark-mesh{
+		width: 100%;
+		height: $main_height;
+		position: absolute;
+		background-color: rgba(0,0,0,.5);
+		z-index: $z-dark_mesh;
+	}
+	&__photos{
+		width: 100%;
+		height: $main_height;
+		position: relative;
+		opacity: .9;
+		box-shadow: 0 0 5px #000 inset;
+	}
+	&__photo1{
+		background-image: url(../img/yokohama.jpg);
+		background-size: cover;
+		background-position: center center;
+		position: relative;
+		height: $main_height;
+	}
+	&__photo2{
+		@extend .main__photo1;
+		background-image: url(../img/tokyo.jpg);
+	}
+	&__photo3{
+		@extend .main__photo1;
+		background-image: url(../img/koutouku.jpg);
+	}
+
+}
+
+
+
 .footer{
 	text-align: center;
 	width: 100%;
 	height: 100px;
 	color: #fff;
 	background-color: #272727;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	&__copy{
 		line-height: 100px;

@@ -20,6 +20,7 @@ include("assets/html/header.php");
 <?php
 // メインテーブル
 $db = db();
+$db->query("set names utf8"); // 文字化け対策
 $qry = "SELECT * FROM me_an_table";
 $data = $db->query($qry);
 
